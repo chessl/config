@@ -13,17 +13,66 @@ set -gx EDITOR nvim
 # Variables
 ###################################################################
 
-# XDG based directory
-if test -z "$XDG_CACHE_HOME"
-    set -g XDG_CACHE_HOME $HOME/.cache
+# XDG base directory
+if test -z "$XDG_DATA_HOME"
+    set -g XDG_DATA_HOME $HOME/.local/share
+end
+
+if test -z "$XDG_DATA_DIRS"
+    set -g XDG_DATA_DIRS /usr/local/share
 end
 
 if test -z "$XDG_CONFIG_HOME"
     set -g XDG_CONFIG_HOME $HOME/.config
 end
 
-if test -z "$XDG_DATA_HOME"
-    set -g XDG_DATA_HOME $HOME/.local/share
+if test -z "$XDG_CONFIG_DIRS"
+    set -g XDG_CONFIG_DIRS /etc/xdg
+end
+
+if test -z "$XDG_CACHE_HOME"
+    set -g XDG_CACHE_HOME $HOME/.cache
+end
+
+# XDG user directories
+
+if test -z "$XDG_DESKTOP_DIR"
+    set -g XDG_DESKTOP_DIR $HOME/Desktop
+end
+
+
+if test -z "$XDG_DOWNLOAD_DIR"
+    set -g XDG_DOWNLOAD_DIR $HOME/Downloads
+end
+
+if test -z "$XDG_DOCUMENTS_DIR"
+    set -g XDG_DOCUMENTS_DIR $HOME/Documents
+end
+
+if test -z "$XDG_MUSIC_DIR"
+    set -g XDG_MUSIC_DIR $HOME/Music
+end
+
+if test -z "$XDG_PICTURES_DIR"
+    set -g XDG_PICTURES_DIR $HOME/Pictures
+end
+
+if test -z "$XDG_VIDEOS_DIR"
+    set -g XDG_VIDEOS_DIR $HOME/Movies
+end
+
+if test -z "$XDG_TEMPLATES_DIR"
+    set -g XDG_TEMPLATES_DIR $HOME/Templates
+end
+
+if test -z "$XDG_PUBLICSHARE_DIR"
+    set -g XDG_PUBLICSHARE_DIR $HOME/Public
+end
+
+# Non-standard directories
+
+if test -z "$XDG_STATE_HOME"
+    set -g XDG_STATE_HOME $HOME/.local/state
 end
 
 # surge proxy
