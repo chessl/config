@@ -1,0 +1,35 @@
+[user]
+  name = Chess Luo
+  email = chess@luo.sh
+  signingkey = D2B4A0DD328ED3AE
+[color]
+  # Enable colors in color-supporting terminals
+  ui = auto 
+[core]
+  # Don't paginate output by default
+  pager = less -+FRSX -FRX
+  editor = nvim 
+[diff]
+  # Use better, descriptive initials (c, i, w) instead of a/b.
+  mnemonicPrefix = true
+  # Show renames/moves as such
+  renames = true
+  # When using --word-diff, assume --word-diff-regex=.
+  wordRegex = .
+  # Display submodule-related information (commit listings)
+  submodule = log
+[help]
+  # default 0
+  # negative value to run correct command immediately
+	autocorrect = 7
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[alias]
+  # find commits that changed a file: git his <filepath>
+  his = log --follow --color=always --date=format:'%d %b, %Y' --pretty=format:'(%Cgreen%h%Creset)[%ad] %C(blue bold)%s%Creset'
+  # search code in commit history: git wot :function_name:filepath
+  wot = log --date=format:'%d %b, %Y' --pretty='%n%C(yellow bold)📅️ %ad%Creset by (%C(green bold)%an%Creset) %C(cyan bold)%h%Creset' --graph -L
+  # top 10 most edited files
+  top10 = ! git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -10
