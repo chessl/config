@@ -13,11 +13,12 @@ local config = {
     -- require("lsp_signature").setup()
     -- end,
     -- },
+    { "shaunsingh/nord.nvim" }
   },
 
   overrides = {
     treesitter = {
-      ensure_installed = { "lua" },
+      ensure_installed = { "lua", "bash", "c", "cpp", "css", "dart", "dockerfile", "go", "haskell", "html", "java", "javascript", "json", "markdown", "python", "rust", "scss", "toml", "tsx", "typescript", "vim", "yaml" },
     },
   },
 

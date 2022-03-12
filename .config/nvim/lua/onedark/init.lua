@@ -3,7 +3,7 @@ if vim.fn.exists "syntax_on" then
   vim.cmd "syntax reset"
 end
 vim.o.background = "dark"
-vim.o.termguicolors = false
+vim.o.termguicolors = true
 vim.g.colors_name = "onedark"
 
 C = require "onedark.colors"

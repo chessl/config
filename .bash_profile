@@ -198,6 +198,10 @@ export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 # gnu-sed                                                                       
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# GEN
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
  
 # asdf
 . $(brew --prefix asdf)/libexec/asdf.sh
